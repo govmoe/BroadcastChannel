@@ -16,21 +16,24 @@
   --color-link-hover: var(--link-hover-color);
   --color-line: var(--border-color);
   --color-footer: var(--muted-color);
-  --shadow-soft: none;
-  --radius-panel: 0;
-  --radius-chip: 0;
-  --radius-media: 0;
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 6px 24px rgba(0, 0, 0, 0.1);
+  --radius-panel: 10px;
+  --radius-chip: 20px;
+  --radius-media: 8px;
 }
 
 @layer base {
   :root {
     --width: 800px;
     --body-padding-inline: 20px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
+    --font-main: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --font-secondary: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     --font-scale: 1em;
-    --background-color: #fff;
-    --heading-color: #222;
+    --background-color: #fafafa;
+    --card-background-color: #fff;
+    --heading-color: #1a1a1a;
     --text-color: #444;
     --link-color: #3273dc;
     --visited-color: #8b6fcb;
@@ -39,10 +42,10 @@
     --blockquote-color: #222;
 
     --accent-color: var(--link-color);
-    --border-color: color-mix(in srgb, var(--text-color) 22%, transparent);
+    --border-color: color-mix(in srgb, var(--text-color) 16%, transparent);
     --link-hover-color: color-mix(in srgb, var(--link-color) 72%, var(--heading-color));
-    --muted-color: color-mix(in srgb, var(--text-color) 74%, transparent);
-    --surface-color: var(--background-color);
+    --muted-color: color-mix(in srgb, var(--text-color) 65%, transparent);
+    --surface-color: var(--card-background-color);
     --code-muted-color: color-mix(in srgb, var(--code-color) 72%, var(--code-background-color));
     --code-accent-color: color-mix(in srgb, var(--link-color) 75%, var(--code-color));
     --code-alt-accent-color: color-mix(in srgb, var(--visited-color) 65%, var(--code-color));
@@ -57,17 +60,21 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #01242e;
+      --background-color: #0a0a0b;
+      --card-background-color: #161618;
       --heading-color: #eee;
-      --text-color: #ddd;
-      --link-color: #8cc2dd;
-      --visited-color: #8b6fcb;
-      --code-background-color: #000;
+      --text-color: #bbb;
+      --link-color: #7bb8e0;
+      --visited-color: #a78bfa;
+      --code-background-color: #09090b;
       --code-color: #ddd;
       --blockquote-color: #ccc;
       --reaction-paid-color: #f3cc65;
       --reaction-paid-border-color: color-mix(in srgb, var(--reaction-paid-color) 52%, transparent);
       --reaction-paid-background-color: color-mix(in srgb, var(--reaction-paid-color) 14%, var(--background-color));
+      --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.3);
+      --shadow-card-hover: 0 6px 24px rgba(0, 0, 0, 0.5);
     }
   }
 }

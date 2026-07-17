@@ -6,7 +6,7 @@
     }
 
     .site-header > .title > h1 {
-      font-size: 1.2em;
+      font-size: 1.15em;
     }
 
     .channel-avatar {
@@ -22,6 +22,21 @@
     .site-navigation {
       align-items: flex-start;
       flex-wrap: wrap;
+    }
+
+    .posts-feed > li {
+      padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+      left: calc(-1.5rem - 4px);
+      width: 8px;
+      height: 8px;
+    }
+
+    .post-entry {
+      margin-bottom: 1rem;
+      padding: 1.25rem 1rem;
     }
 
     .desktop-search {

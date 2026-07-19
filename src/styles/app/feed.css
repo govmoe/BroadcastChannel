@@ -43,6 +43,13 @@
     box-shadow: var(--shadow-card-hover);
   }
 
+  .hn-story,
+  .post-entry-avatar,
+  .post-entry-author,
+  .tg-message-meta {
+    display: none;
+  }
+
   .posts-feed > li:last-child .post-entry {
     margin-bottom: 0;
   }
